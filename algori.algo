@@ -1,0 +1,22 @@
+ALGORITHM checkpoint
+VAR
+    c:CHAR:="";
+    countwords:INTEGER:=0;
+    countcharacters:INTEGER:=0;
+    countvowels:INTEGER:=0;
+BEGIN
+    WHILE (c<>".") DO // condition= the character (c) is different than "."
+        read (c)
+        countcharacters:=countcharacters+1; // the number of characters will increment by 1
+        IF (c='a' or c='e' or c='u' or c='i' or c='o' or c='A' or c='E' or c='U' or c='I' or c='O') THEN
+        countvowels:=countvowels+1; //if any vowel is found , the number of vowels will increment by 1
+        END_IF
+
+        IF (c=" ") THEN //condition= if there is a space then the number of words will increment by 1
+            countwords:=countwords+1;
+        END_IF
+    END_WHILE
+    write("the length of the sentence is",countcharacters);
+    write("the number of words in the sentence is",countwords);
+    write("the number of vowels in the sentenceis",countvowels);
+END
